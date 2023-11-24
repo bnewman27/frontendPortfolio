@@ -62,6 +62,15 @@ const App = () => {
     }
   }
 
+  const moveIntoSquareBelow = () => {
+    for (let i= 0 ; i < 64 - width; i++) {
+    
+      if(currentColorArrangement[i] + width === '') {
+        currentColorArrangement[i+ width] = currentColorArrangement[i]
+        currentColorArrangement[i] = ''
+      }
+    }
+  } // Added missing closing curly brace here
 
   const createBoard = () => {
     const randomColorArrangement = []
@@ -82,10 +91,12 @@ const App = () => {
       checkForRowOfFour()
       checkForColumnOfThree()
       checkForRowOfThree()
+      moveIntoSquareBelow()
       setCurrentColorArrangement([...currentColorArrangement])
     }, 100)
     return () => clearInterval(timer)
-  }, [checkForColumnOfFour, checkForRowOfFour, checkForColumnOfThree, checkForRowOfThree, currentColorArrangement])
+  }, [checkForColumnOfFour, checkForRowOfFour, checkForColumnOfThree, checkForRowOfThree, moveIntoSquareBelow, currentColorArrangement])
+  
 
   console.log(currentColorArrangement)
 
