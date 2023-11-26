@@ -26,14 +26,16 @@ const App = () => {
   const [squareBeingReplaced, setSquareBeingReplaced] = useState(null)
   const [scoreDisplay, setScoreDisplay ] = useState(0)
 
+// Scoring
+
   const checkForColumnOfFour = () => {
-    for (let i = 0; i <= 47; i++) {
+    for (let i = 0; i <= 39; i++) {
       const columnOfFour = [ i, i + width, i + width * 2, i + width * 3]
       const decidedColor = currentColorArrangement[i]
       const isBlank = currentColorArrangement[i] === blank
       
       if (columnOfFour.every((square) => currentColorArrangement[square] === decidedColor && !isBlank)) {
-          setScoreDisplay((score) => score + 4)
+          setScoreDisplay((score) => score + 750)
           columnOfFour.forEach((square) => (currentColorArrangement[square] = blank))
           return true
       }
@@ -48,7 +50,7 @@ const App = () => {
       const isBlank = currentColorArrangement[i] === blank
       if (notValid.includes(i)) continue
       if (rowOfFour.every((square) => currentColorArrangement[square] === decidedColor && !isBlank)) { 
-        setScoreDisplay((score) => score + 4)
+        setScoreDisplay((score) => score + 750)
         rowOfFour.forEach((square) => (currentColorArrangement[square] = blank))
         return true
       }
@@ -61,7 +63,7 @@ const App = () => {
       const decidedColor = currentColorArrangement[i]
       const isBlank = currentColorArrangement[i] === blank
       if (columnOfThree.every((square) => currentColorArrangement[square] === decidedColor && !isBlank)) {
-          setScoreDisplay((score) => score + 3) 
+          setScoreDisplay((score) => score + 250) 
           columnOfThree.forEach((square) => (currentColorArrangement[square] = blank))
           return true
       }
@@ -76,24 +78,39 @@ const App = () => {
       const isBlank = currentColorArrangement[i] === blank
       if (notValid.includes(i)) continue
       if (rowOfThree.every((square) => currentColorArrangement[square] === decidedColor && !isBlank)) { 
-        setScoreDisplay((score) => score + 3)
+        setScoreDisplay((score) => score + 250)
         rowOfThree.forEach((square) => (currentColorArrangement[square] = blank))
         return true
       }
     }
   }
 
+  // Respawn
+  
   const moveIntoSquareBelow = () => {
-    for (let i= 0 ; i <= 55 - width; i++) {
-    
-      if(currentColorArrangement[i] + width === '') {
+    for (let i= 0 ; i <= 71 - width; i++) {
+      const gameBoardGrid = [
+         0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 
+        10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 
+        20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+        30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+        40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
+        50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
+        60, 61, 62, 63]
+      const isgameBoardGrid = gameBoardGrid.includes(i)
+
+      if (isgameBoardGrid && currentColorArrangement[i] === blank) {
+        let randomNumber = Math.floor(Math.random() * candyColors.length)
+        currentColorArrangement[i] = candyColors[randomNumber]
+      }
+      if(currentColorArrangement[i] + width === blank) {
         currentColorArrangement[i+ width] = currentColorArrangement[i]
         currentColorArrangement[i] = blank
       }
     }
   } 
 
-  console.log(scoreDisplay)
+// Dragging
 
   const dragStart = (e) => {
     setSquareBeingDragged(e.target)
@@ -163,7 +180,7 @@ const App = () => {
       checkForRowOfThree()
       moveIntoSquareBelow()
       setCurrentColorArrangement([...currentColorArrangement])
-    }, 1000)
+    }, 60)
     return () => clearInterval(timer)
   }, [checkForColumnOfFour, checkForRowOfFour, checkForColumnOfThree, checkForRowOfThree, moveIntoSquareBelow, currentColorArrangement])
   
@@ -193,5 +210,6 @@ const App = () => {
     </div>
   );
 }
+
 export default App;
 
