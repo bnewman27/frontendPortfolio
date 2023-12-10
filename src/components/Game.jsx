@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import './index.css'
-import ScoreBoard from './components/ScoreBoard'
-import blueCandy from './images/blue-candy.png'
-import greenCandy from './images/green-candy.png'
-import orangeCandy from './images/orange-candy.png'
-import purpleCandy from './images/purple-candy.png'
-import redCandy from './images/red-candy.png'
-import yellowCandy from './images/yellow-candy.png'
-import blank from './images/blank.png'
+import '../index.css'
+import ScoreBoard from './ScoreBoard'
+import blueCandy from '../images/blue-candy.png'
+import greenCandy from '../images/green-candy.png'
+import orangeCandy from '../images/orange-candy.png'
+import purpleCandy from '../images/purple-candy.png'
+import redCandy from '../images/red-candy.png'
+import yellowCandy from '../images/yellow-candy.png'
+import blank from '../images/blank.png'
 
 const width = 8
 const candyColors = [
@@ -20,7 +20,7 @@ const candyColors = [
    
 ]
 
-const App = () => {
+const Game = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([])
   const [squareBeingDragged, setSquareBeingDragged] = useState(null)
   const [squareBeingReplaced, setSquareBeingReplaced] = useState(null)
@@ -188,7 +188,8 @@ const App = () => {
   
 
   return (
-    <div className="app">
+    <div className="p-5 rounded-lg bg-black grid grid-cols-2 gap-4">
+      
       <div className="game">
         {currentColorArrangement.map((candyColor, index) => (
           <img
@@ -206,10 +207,12 @@ const App = () => {
           />
         ))}
       </div>
-      <ScoreBoard score={scoreDisplay} />
+      <div>
+      <ScoreBoard score={scoreDisplay} className="" />
+      </div>
     </div>
   );
 }
 
-export default App;
+export default Game;
 
