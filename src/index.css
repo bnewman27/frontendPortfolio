@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
 
 .app {
   display: flex;
@@ -13,12 +15,13 @@
   height: 560px;
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .game img {
   width: 70px;
-  height: 70px;
-  background-color: #121212;
+  height: 70px; 
+  
 }
 
 .score-board {
@@ -28,8 +31,12 @@
   background-color: #121212;
   border: 2px solid #000000;
   
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
+
+
+

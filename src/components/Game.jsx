@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../index.css'
 import ScoreBoard from './ScoreBoard'
+import Board from './Board'
 import blueCandy from '../images/blue-candy.png'
 import greenCandy from '../images/green-candy.png'
 import orangeCandy from '../images/orange-candy.png'
@@ -17,8 +18,12 @@ const candyColors = [
     redCandy,
     yellowCandy,
     greenCandy
-   
 ]
+
+// const blank = [
+//   blank
+// ]
+
 
 const Game = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([])
@@ -188,9 +193,11 @@ const Game = () => {
   
 
   return (
-    <div className="p-5 rounded-lg bg-black grid grid-cols-2 gap-4">
+    <div className="">
       
-      <div className="game">
+      <div className="game 
+  }
+}">
         {currentColorArrangement.map((candyColor, index) => (
           <img
             key={index}
@@ -207,10 +214,15 @@ const Game = () => {
           />
         ))}
       </div>
+      <div className="">
       <div>
       <ScoreBoard score={scoreDisplay} className="" />
       </div>
-    </div>
+      <div>
+      <Board />
+      </div>
+      </div>
+      </div>
   );
 }
 
