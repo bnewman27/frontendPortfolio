@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/gge0xvh.css");
+
 @import "tailwindcss/base";
 
 @import "tailwindcss/components";
@@ -15,6 +17,7 @@
   height: 560px;
   display: flex;
   flex-wrap: wrap;
+  background-color:#000000
   
 }
 
@@ -24,18 +27,10 @@
   
 }
 
-.score-board {
-  width: 200px;
-  height: 560px;
-  color: aliceblue;
-  background-color: #121212;
-  border: 2px solid #000000;
-  
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+.scoreboard {
+  font-family: serif;
+  text-align: center;
+  align-content: center;
 }
 
 

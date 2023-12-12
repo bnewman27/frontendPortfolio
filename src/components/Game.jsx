@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../index.css'
 import ScoreBoard from './ScoreBoard'
-import Board from './Board'
+
 import blueCandy from '../images/blue-candy.png'
 import greenCandy from '../images/green-candy.png'
 import orangeCandy from '../images/orange-candy.png'
@@ -193,11 +193,7 @@ const Game = () => {
   
 
   return (
-    <div className="">
-      
-      <div className="game 
-  }
-}">
+   <div className="game">
         {currentColorArrangement.map((candyColor, index) => (
           <img
             key={index}
@@ -212,17 +208,13 @@ const Game = () => {
             onDrop={dragDrop}
             onDragEnd={dragEnd}
           />
-        ))}
-      </div>
-      <div className="">
-      <div>
-      <ScoreBoard score={scoreDisplay} className="" />
-      </div>
-      <div>
-      <Board />
-      </div>
-      </div>
-      </div>
+        ))} 
+        
+    <div className="scoreboard">
+    <ScoreBoard score={scoreDisplay} />
+      
+    </div>
+  </div>
   );
 }
 

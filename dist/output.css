@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/gge0xvh.css");
+
 /*
 ! tailwindcss v3.3.6 | MIT License | https://tailwindcss.com
 */
@@ -431,7 +433,7 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
+*, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -481,7 +483,7 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-::backdrop {
+::backdrop{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -542,6 +544,7 @@ video {
   height: 560px;
   display: flex;
   flex-wrap: wrap;
+  background-color:#000000
 }
 
 .game img {
@@ -549,16 +552,8 @@ video {
   height: 70px;
 }
 
-.score-board {
-  width: 200px;
-  height: 560px;
-  color: aliceblue;
-  background-color: #121212;
-  border: 2px solid #000000;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+.scoreboard {
+  font-family: serif;
 }
 
 
