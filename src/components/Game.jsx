@@ -193,7 +193,7 @@ const Game = () => {
   
 
   return (
-   <div className="game">
+   <div className="game bg-dmbg text-dmtext font-serif">
         {currentColorArrangement.map((candyColor, index) => (
           <img
             key={index}
@@ -207,10 +207,11 @@ const Game = () => {
             onDragLeave={(e) => e.preventDefault()}
             onDrop={dragDrop}
             onDragEnd={dragEnd}
+            className=""
           />
         ))} 
         
-    <div className="scoreboard">
+    <div className="scoreboard bg-dms">
     <ScoreBoard score={scoreDisplay} />
       
     </div>

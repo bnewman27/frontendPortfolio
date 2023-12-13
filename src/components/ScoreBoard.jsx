@@ -5,7 +5,7 @@ import '../input.css';
 
 const ScoreBoard = ({score}) => {
     return (
-    <div className ="h-56 grid grid-cols-3 gap-4 content-center" >
+    <div className ="font-serif h-56 grid grid-cols-4 gap-4 content-center" >
         <div className="">Score</div>
         <div>{score}</div>
         <Board />

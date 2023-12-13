@@ -4,9 +4,11 @@
 
 @import url("https://use.typekit.net/gge0xvh.css");
 
-.app {
-  display: flex;
-  padding: 30px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px dotted #FF69B4; */
 }
 
 .game {
@@ -14,18 +16,23 @@
   height: 560px;
   display: flex;
   flex-wrap: wrap;
-  background-color:#000000;}
+  
+  
+  
+}
 
 .game img {
   width: 70px;
   height: 70px;
+  
 }
 
 .scoreboard {
   font-family: serif bold;
   text-align: center;
   align-content: center;
-  border: 5px solid #FF69B4;
+  
+  
 }
 
 
