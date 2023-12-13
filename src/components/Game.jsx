@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import '../input.css'
+import '../index.css'
 import ScoreBoard from './ScoreBoard'
 
 import blueCandy from '../images/blue-candy.png'

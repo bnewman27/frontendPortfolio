@@ -9,7 +9,7 @@
 .app {
   display: flex;
   padding: 30px;
-  background-color: #121212;
+
 }
 
 .game {
@@ -19,18 +19,24 @@
   flex-wrap: wrap;
   background-color:#000000;
   
+
+
+  
 }
 
 .game img {
   width: 70px;
   height: 70px; 
   
+
+  
 }
 
 .scoreboard {
-  font-family: serif;
+  font-family: serif bold;
   text-align: center;
   align-content: center;
+  border: 5px solid #FF69B4;
 }
 
 
