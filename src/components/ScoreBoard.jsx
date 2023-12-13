@@ -1,6 +1,6 @@
 import React from 'react';
 import Board from './Board';
-import '../index.css';
+import '../input.css';
 
 
 const ScoreBoard = ({score}) => {
