@@ -160,7 +160,7 @@ const Game = () => {
       setCurrentColorArrangement([...currentColorArrangement])
     }
 
-
+    
 
   }
 
@@ -193,7 +193,8 @@ const Game = () => {
   
 
   return (
-   <div className="game bg-dmbg text-dmtext font-serif">
+    <div className="grid grid-rows-2 ">
+   <div className="game rounded-xl bg-dmbg text-dmtext font-serif shadow-2xl shadow-white">
         {currentColorArrangement.map((candyColor, index) => (
           <img
             key={index}
@@ -207,14 +208,15 @@ const Game = () => {
             onDragLeave={(e) => e.preventDefault()}
             onDrop={dragDrop}
             onDragEnd={dragEnd}
-            className=""
+            className="bg-dms p-1 rounded-full hover:animate-bounce hover:shadow-inner "
           />
         ))} 
         
-    <div className="scoreboard bg-dms">
+    <div className="scoreboard bg-dms px-20">
     <ScoreBoard score={scoreDisplay} />
       
     </div>
+  </div>
   </div>
   );
 }

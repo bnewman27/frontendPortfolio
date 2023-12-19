@@ -28,6 +28,14 @@ module.exports = {
         sans: ['Graphik', 'sans-serif'],
         serif: ['buena-park-jf', 'serif'],
       },
+      extend: {
+        keyframes: {
+          wiggle: {
+            '0%, 100%': { transform: 'rotate(-3deg)' },
+            '50%': { transform: 'rotate(3deg)' },
+          }
+        }
+      }
     },
   plugins: [
     require('@tailwindcss/forms'),
