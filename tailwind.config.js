@@ -27,21 +27,13 @@ module.exports = {
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],
         serif: ['buena-park-jf', 'serif'],
+        puffinChrome: ['puffin-arcade-chrome', 'sans-serif'],
+        puffinLiquid: ['puffin-arcade-liquid', 'sans-serif'],
+
       },
-      extend: {
-        keyframes: {
-          wiggle: {
-            '0%, 100%': { transform: 'rotate(-3deg)' },
-            '50%': { transform: 'rotate(3deg)' },
-          }
-        }
-      }
     },
   plugins: [
     require('@tailwindcss/forms'),
   ],
 }
 
-// font-family: "buena-park-jf", serif;
-//   font-weight: 400;
-//   font-style: normal;
