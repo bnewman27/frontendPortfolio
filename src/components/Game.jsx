@@ -193,11 +193,12 @@ const Game = () => {
   
 
   return (
-    <div className="grid grid-rows-3 bg-sky-950 ring justify-center">
-    <div className="font-puffinChrome ring ring-pink text-sky-400 text-8xl text-center pt-8">
+    
+    <div className="grid grid-rows-1 bg-sky-950 ring justify-center space-y-8">
+    <div className="font-puffinChrome border border-sky-800 shadow-inner shadow-sky-400 text-sky-400 text-8xl text-center h-40 py-8">
         Match 3 or 4!
     </div>
-    <div className="game bg-gradient-radial from-sky-400 via-sky-800 to-sky-950 rounded-xl ring ring-sky-950">
+    <div className="game bg-gradient-radial  from-sky-400 via-sky-800 to-sky-950 rounded-xl ring ring-sky-950 ">
         {currentColorArrangement.map((candyColor, index) => (
           <img
             key={index}
@@ -211,11 +212,11 @@ const Game = () => {
             onDragLeave={(e) => e.preventDefault()}
             onDrop={dragDrop}
             onDragEnd={dragEnd}
-            className=" p-2 rounded-xl bg-gradient-radial from-sky-800 via-sky-400 to-sky-200 hover:animate-bounce ring ring-sky-800 shadow-2xl shadow-sky-950"
+            className="p-2 rounded-xl bg-gradient-radial from-sky-800 via-sky-400 to-sky-200 hover:animate-pulse active:animate-bounce ring ring-sky-800 shadow-2xl shadow-sky-950"
           />
         ))} 
      </div>
-   <div className="scoreboard rounded-xl space-y-4 p-8">
+   <div className="scoreboard rounded-xl -space-y-8 ">
     <ScoreBoard score={scoreDisplay} />
       
    </div>
