@@ -10,6 +10,9 @@ module.exports = {
       lg: '976px',
       xl: '1440px',
     },
+    backgroundImage: {
+      'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+    },
       colors: {
         'dmbg': '#000000',
         'dms': '#121212',
@@ -23,6 +26,10 @@ module.exports = {
         'gray-dark': '#273444',
         'gray': '#8492a6',
         'gray-light': '#d3dce6',
+        "sky-200": '#bae6fd',
+        "sky-400": '#38bdf8',
+        "sky-800": "#075985",
+        "sky-950": '#082f49',
       },
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],

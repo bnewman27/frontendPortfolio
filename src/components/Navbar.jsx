@@ -16,7 +16,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="header" className="bg-dms text-blue text-4xl font-puffinLiquid ">
+    <Disclosure as="header" className="bg-dmbg text-sky-400 text-4xl font-puffinLiquid ">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:divide-y lg:divide-gray-700 lg:px-8 ">
@@ -27,8 +27,8 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-dms text-blue shadow-xl shadow-white rounded-full' : 'hover:rounded-full',
-                    'hover:bg-dmbg py-2 px-8 text-lg hover:shadow-inner hover:shadow-dms '
+                    item.current ? 'bg-sky-800 text-sky-400 shadow-xl shadow-white rounded-full' : 'hover:rounded-full',
+                    'hover:bg-sky-950 py-2 px-8 text-xl hover:shadow-inner hover:shadow-dms '
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >
