@@ -36,6 +36,7 @@ module.exports = {
         serif: ['buena-park-jf', 'serif'],
         puffinChrome: ['puffin-arcade-chrome', 'sans-serif'],
         puffinLiquid: ['puffin-arcade-liquid', 'sans-serif'],
+        puffinRegular: ['puffin-arcade-regular', 'sans-serif'],
 
       },
     },

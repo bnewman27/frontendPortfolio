@@ -80,10 +80,6 @@ function ScoreBoard({ score }) {
                     Score
                     <div>{score}</div>
                 </div>
-                <div className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner drop-shadow-lg shadow-dmbg rounded-full p-4">
-                    High Scores
-                    
-                </div>
             </div>
         );
     }
@@ -93,7 +89,7 @@ function getHighScores() {
     const storedHighScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
 
     return (
-        <ul className="text-6xl fony-puffinLiquid">
+        <ul className="text-5xl font-puffinLiquid">
             {storedHighScores.map((score, index) => (
                 <li key={index}>{score.name}: {score.score}</li>
             ))}
