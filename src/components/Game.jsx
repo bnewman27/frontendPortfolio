@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import '../input.css'
-import ScoreBoard from './ScoreBoard'
+import { ScoreBoard } from './ScoreBoard'
 
 import blueCandy from '../images/blue-candy.png'
 import greenCandy from '../images/green-candy.png'
 import orangeCandy from '../images/orange-candy.png'
 import purpleCandy from '../images/purple-candy.png'
-import redCandy from '../images/red-candy.png'
+import redCandy from '../images/red-candy.png' 
 import yellowCandy from '../images/yellow-candy.png'
 import blank from '../images/blank.png'
 
@@ -20,16 +20,13 @@ const candyColors = [
     greenCandy
 ]
 
-// const blank = [
-//   blank
-// ]
-
-
 const Game = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([])
   const [squareBeingDragged, setSquareBeingDragged] = useState(null)
   const [squareBeingReplaced, setSquareBeingReplaced] = useState(null)
-  const [scoreDisplay, setScoreDisplay ] = useState(0)
+  const [scoreDisplay, setScoreDisplay] = useState(0)
+
+
 
 // Scoring
 
@@ -43,7 +40,7 @@ const Game = () => {
           setScoreDisplay((score) => score + 750)
           columnOfFour.forEach((square) => (currentColorArrangement[square] = blank))
           return true
-      }
+      } 
     }
   }  
 
@@ -159,9 +156,6 @@ const Game = () => {
       currentColorArrangement[squareBeingDraggedId] = squareBeingDragged.getAttribute('src')
       setCurrentColorArrangement([...currentColorArrangement])
     }
-
-    
-
   }
 
   const createBoard = () => {
@@ -194,8 +188,8 @@ const Game = () => {
 
   return (
     
-    <div className="grid grid-rows-1 bg-sky-950 ring justify-center space-y-8">
-    <div className="font-puffinChrome border border-sky-800 shadow-inner shadow-sky-400 text-sky-400 text-8xl text-center h-40 py-8">
+    <div className="grid grid-rows-1 bg-sky-950 justify-center space-y-8">
+    <div className="font-puffinChrome ring ring-sky-400 drop-shadow-lg shadow-inner shadow-sky-950 text-sky-400 text-8xl text-center h-40 py-8">
         Match 3 or 4!
     </div>
     <div className="game bg-gradient-radial  from-sky-400 via-sky-800 to-sky-950 rounded-xl ring ring-sky-950 ">
@@ -212,15 +206,17 @@ const Game = () => {
             onDragLeave={(e) => e.preventDefault()}
             onDrop={dragDrop}
             onDragEnd={dragEnd}
-            className="p-2 rounded-xl bg-gradient-radial from-sky-800 via-sky-400 to-sky-200 hover:animate-pulse active:animate-bounce ring ring-sky-800 shadow-2xl shadow-sky-950"
+            className="p-2 rounded-xl bg-gradient-radial decoration-white from-sky-800 via-sky-400 to-sky-200 hover:animate-pulse active:animate-bounce ring ring-sky-800 shadow-2xl shadow-sky-950"
           />
         ))} 
      </div>
-   <div className="scoreboard rounded-xl -space-y-8 ">
+     <div className="scoreboard rounded-xl -space-y-8 ">
     <ScoreBoard score={scoreDisplay} />
+    
       
    </div>
    </div>
+   
   );
 }
 

@@ -1,57 +1,104 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../input.css';
 
 const HIGH_SCORES = 'highScores';
 const NO_OF_HIGH_SCORES = 10;
-const highScoreString = localStorage.getItem(HIGH_SCORES);
-const highScores = JSON.parse(highScoreString) ?? [];
 
+function ScoreBoard({ score }) {
+    const [highScores, setHighScores] = useState([]);
+    const [timer, setTimer] = useState(60);
 
-function checkHighScore(score) {
-    const highScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
-    const lowestScore = highScores[NO_OF_HIGH_SCORES - 1]?.score ?? 0;
-   
-    
-    if (score > lowestScore) {
-      saveHighScore(score, highScores); // TODO
-      showHighScores(); // TODO
+    useEffect(() => {
+        showHighScores();
+    }, []);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTimer((prevTimer) => prevTimer - 1);
+        }, 1000);
+
+        if (timer === 0) {
+            clearInterval(interval);
+        }
+
+        return () => clearInterval(interval);
+    }, [timer]);
+
+    function showHighScores() {
+        const storedHighScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
+        setHighScores(storedHighScores);
     }
-  }
 
-  function saveHighScore(score, highScores) {
-    const name = prompt('You got a highscore! Enter name:');
-    const newScore = { score, name };
-    
-    // 1. Add to list
-    highScores.push(newScore);
-  
-    // 2. Sort the list
-    highScores.sort((a, b) => b.score - a.score);
-    
-    // 3. Select new list
-    highScores.splice(NO_OF_HIGH_SCORES);
-    
-    // 4. Save to local storage
-    localStorage.setItem(HIGH_SCORES, JSON.stringify(highScores));
-  };
+    function checkHighScore(score) {
+        const storedHighScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
+        const lowestScore = storedHighScores[NO_OF_HIGH_SCORES - 1]?.score ?? 0;
 
+        if (score > lowestScore) {
+            saveHighScore(score, storedHighScores);
+            showHighScores();
+        }
+    }
 
-const ScoreBoard = ({score, highScores}) => {
-    return (
-    <div className ="font-puffinChrome text-sky-400 text-4xl grid grid-cols-2 gap-8 text-center content-center">
-        
-        <div className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner shadow-dmbg rounded-full p-4">Score
-            <div className="">{score}
+    function saveHighScore(score, storedHighScores) {
+        const name = prompt('You got a highscore! Enter name:');
+        const newScore = { score, name };
+
+        storedHighScores.push(newScore);
+        storedHighScores.sort((a, b) => b.score - a.score);
+        storedHighScores.splice(NO_OF_HIGH_SCORES);
+        localStorage.setItem(HIGH_SCORES, JSON.stringify(storedHighScores));
+        console.log(storedHighScores);
+    }
+
+    function endLevel() {
+        checkHighScore(score);
+        setTimer(60);
+    }
+
+    if (timer === 0) {
+        return (
+            <div className="font-puffinChrome text-sky-400 text-4xl grid grid-cols-2 gap-8 text-center content-center">
+                <div className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner drop-shadow-lg shadow-dmbg rounded-full p-4">
+                    Timer
+                    <div className="animate-pulse">{timer}</div>
+                </div>
+                <button onClick={endLevel} className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner drop-shadow-lg shadow-dmbg rounded-full p-4">
+                    <div className="animate-pulse">Next Level</div>
+                </button>
             </div>
-        </div>
-        <div className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner shadow-dmbg rounded-full p-4">High Score
-            <div className="">{checkHighScore(account.score)}
-            </div>
-        </div>
-    </div>
-    ) 
+        );
+    }
 
+    if (timer !== 0) {
+        return (
+            <div className="font-puffinChrome text-sky-400 text-4xl grid grid-cols-2 gap-8 text-center content-center">
+                <div className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner drop-shadow-lg shadow-dmbg rounded-full p-4">
+                    Timer
+                    <div className="animate-pulse">{timer}</div>
+                </div>
+                <div className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner drop-shadow-lg shadow-dmbg rounded-full p-4">
+                    Score
+                    <div>{score}</div>
+                </div>
+                <div className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner drop-shadow-lg shadow-dmbg rounded-full p-4">
+                    High Scores
+                    
+                </div>
+            </div>
+        );
+    }
 }
 
-export default ScoreBoard;
+function getHighScores() {
+    const storedHighScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
 
+    return (
+        <ul className="text-6xl fony-puffinLiquid">
+            {storedHighScores.map((score, index) => (
+                <li key={index}>{score.name}: {score.score}</li>
+            ))}
+        </ul>
+    );
+}
+
+export { ScoreBoard, getHighScores };
