@@ -4,24 +4,24 @@ import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/2
 
 function Contact() {
   return (
-    <div className="relative isolate bg-white">
+    <div className="relative isolate bg-sky-800">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
+            <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-sky-950 ring-1 ring-gray-900/10 lg:w-1/2">
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Get in touch</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <h2 className="text-8xl font-puffinLiquid tracking-tight text-sky-400">Get in touch</h2>
+            <p className="mt-6 text-2xl font-puffinRegular leading-8 text-sky-400">
               Hopefully you're here to offer me work, but if not, that's cool too. Reach out and let's make it happen!
             </p>
-            <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
+            <dl className="mt-10 space-y-4 font-puffinRegular text-xl leading-7 text-sky-400">
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Telephone</span>
                   <PhoneIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
                 </dt>
                 <dd>
-                  <a className="hover:text-gray-900" href="tel:+1 (209) 614-3675">
+                  <a className="hover:text-sky-200"  href="tel:+1 (209) 614-3675">
                   +1 (209) 614-3675
                   </a>
                 </dd>
@@ -29,10 +29,10 @@ function Contact() {
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Email</span>
-                  <EnvelopeIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
+                  <EnvelopeIcon className="h-7 w-6 " aria-hidden="true" />
                 </dt>
                 <dd>
-                  <a className="hover:text-gray-900" href="mailto:ben.newman5277@gmail.com">
+                  <a className="hover:text-sky-200"  href="mailto:ben.newman5277@gmail.com">
                   ben.newman5277@gmail.com
                   </a>
                 </dd>
@@ -44,7 +44,7 @@ function Contact() {
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
-                <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
+                <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-sky-400">
                   First name
                 </label>
                 <div className="mt-2.5">
@@ -58,7 +58,7 @@ function Contact() {
                 </div>
               </div>
               <div>
-                <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
+                <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-sky-400">
                   Last name
                 </label>
                 <div className="mt-2.5">
@@ -72,7 +72,7 @@ function Contact() {
                 </div>
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
+                <label htmlFor="email" className="block text-sm font-semibold leading-6 text-sky-400">
                   Email
                 </label>
                 <div className="mt-2.5">
@@ -86,7 +86,7 @@ function Contact() {
                 </div>
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">
+                <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-sky-400">
                   Phone number
                 </label>
                 <div className="mt-2.5">
@@ -100,7 +100,7 @@ function Contact() {
                 </div>
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
+                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-sky-400">
                   Message
                 </label>
                 <div className="mt-2.5">
