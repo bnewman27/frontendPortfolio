@@ -1,44 +1,36 @@
-import { Disclosure } from '@headlessui/react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../input.css';
 
 
-
-const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'About Me', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
-]
-
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <Disclosure as="header" className="bg-dmbg text-sky-400 text-4xl font-puffinLiquid ">
-      {({ open }) => (
-        <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:divide-y lg:divide-gray-700 lg:px-8 ">
-            
-            <nav className="hidden lg:flex lg:space-x-8 lg:py-2 " aria-label="Global">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className={classNames(
-                    item.current ? 'bg-sky-800 text-sky-400 shadow-xl shadow-white rounded-full' : 'hover:rounded-full',
-                    'hover:bg-sky-950 py-2 px-8 text-xl hover:shadow-inner hover:shadow-dms '
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </nav>
+    <nav className="bg-dmbg text-sky-400 ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center">
+            <Link to="/" className="font-puffinChrome text-4xl">
+              My Portfolio
+            </Link>
           </div>
-        </>
-      )}
-    </Disclosure>
-  )
-}
+          <div className="flex font-puffinLiquid">
+            <Link
+              to="/gamepage"
+              className="text-sky-400 hover:text-sky-200 hover:bg-sky-800 hover:shadow-sky-950 shadow-inner hover:text-white px-3 py-2 rounded-full  "
+            >
+              Box O' Matches !!
+            </Link>
+            <Link
+              to="/contact"
+              className="text-sky-400 hover:text-sky-200 hover:bg-sky-800 hover:shadow-sky-950 shadow-inner hover:text-white px-3 py-2 rounded-full  "
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

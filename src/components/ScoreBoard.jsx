@@ -58,11 +58,11 @@ function ScoreBoard({ score }) {
     if (timer === 0) {
         return (
             <div className="font-puffinChrome text-sky-400 text-4xl grid grid-cols-2 gap-8 text-center content-center">
-                <div className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner drop-shadow-lg shadow-dmbg rounded-full p-4">
+                <div className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner drop-shadow-lg shadow-dms rounded-full p-4">
                     Timer
-                    <div className="animate-pulse">{timer}</div>
+                    <div className="animate-ping">{timer}</div>
                 </div>
-                <button onClick={endLevel} className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner drop-shadow-lg shadow-dmbg rounded-full p-4">
+                <button onClick={endLevel} className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner drop-shadow-lg shadow-dms rounded-full p-4">
                     <div className="animate-pulse">Next Level</div>
                 </button>
             </div>
@@ -72,11 +72,11 @@ function ScoreBoard({ score }) {
     if (timer !== 0) {
         return (
             <div className="font-puffinChrome text-sky-400 text-4xl grid grid-cols-2 gap-8 text-center content-center">
-                <div className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner drop-shadow-lg shadow-dmbg rounded-full p-4">
+                <div className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner drop-shadow-lg shadow-dms rounded-full p-4">
                     Timer
                     <div className="animate-pulse">{timer}</div>
                 </div>
-                <div className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner drop-shadow-lg shadow-dmbg rounded-full p-4">
+                <div className="bg-sky-950 ring ring-sky-400 ring-offset-2 ring-offset-dmbg shadow-inner drop-shadow-lg shadow-dms rounded-full p-4">
                     Score
                     <div>{score}</div>
                 </div>
@@ -89,7 +89,7 @@ function getHighScores() {
     const storedHighScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
 
     return (
-        <ul className="text-5xl font-puffinLiquid">
+        <ul className="text-5xl font-puffinLiquid shadow-inner shadow-sky-950">
             {storedHighScores.map((score, index) => (
                 <li key={index}>{score.name}: {score.score}</li>
             ))}
