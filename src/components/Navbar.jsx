@@ -9,11 +9,17 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="font-puffinChrome text-4xl">
-              My Portfolio
+            <Link to="/" className="font-puffinLiquid text-4xl">
+              Ben Newman
             </Link>
           </div>
           <div className="flex font-puffinLiquid">
+          <Link
+              to="/"
+              className="text-sky-400 hover:text-sky-200 hover:bg-sky-800 hover:shadow-sky-950 shadow-inner hover:text-white px-3 py-2 rounded-full  "
+            >
+              Home
+            </Link>
             <Link
               to="/gamepage"
               className="text-sky-400 hover:text-sky-200 hover:bg-sky-800 hover:shadow-sky-950 shadow-inner hover:text-white px-3 py-2 rounded-full  "
