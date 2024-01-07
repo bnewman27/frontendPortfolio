@@ -189,7 +189,7 @@ const Game = () => {
   return (
     
     <div className="grid grid-rows-1 bg-sky-950 justify-center space-y-8">
-    <div className="font-puffinChrome ring ring-sky-400 ring-offset-2 ring-offset-dmbg drop-shadow-lg shadow-inner shadow-sky-950 text-sky-400 text-7xl text-center ">
+    <div className="font-puffinChrome ring ring-sky-400 ring-offset-2 ring-offset-dmbg drop-shadow-lg shadow-inner shadow-sky-950 text-sky-400 text-7xl p-8 text-center ">
         Box O' Matches!!
     </div>
     <div className="game bg-gradient-radial items-center from-sky-400 via-sky-800 to-sky-950 rounded-xl ring ring-sky-950 ">

@@ -12,6 +12,19 @@ module.exports = {
     },
     backgroundImage: {
       'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      'gradient-tr': 'linear-gradient(to top right, var(--tw-gradient-stops));',
+      'gradient-tl': 'linear-gradient(to left top, var(--tw-gradient-stops))',
+      'gradient-br': 'linear-gradient(to bottom right, var(--tw-gradient-stops));',
+      'gradient-bl': 'linear-gradient(to left bottom, var(--tw-gradient-stops))',
+      'gradient-t': 'linear-gradient(to top, var(--tw-gradient-stops))',
+      'gradient-r': 'linear-gradient(to right, var(--tw-gradient-stops))',
+      'gradient-b': 'linear-gradient(to bottom, var(--tw-gradient-stops))',
+      'gradient-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
+  
+        'ben': "url('/images/ben.jpeg')",
+   
+      
+
     },
    
       colors: {
@@ -30,6 +43,7 @@ module.exports = {
         "sky-200": '#bae6fd',
         "sky-400": '#38bdf8',
         "sky-800": "#075985",
+        "sky-900": "#0c4a6e",
         "sky-950": '#082f49',
       },
       fontFamily: {
