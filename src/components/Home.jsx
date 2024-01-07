@@ -11,8 +11,8 @@ export default function Home() {
         <div className="absolute bottom-0 left-3/4 top-0 hidden w-screen bg-gradient-tr from-sky-950 via-sky-800 to-sky-900 lg:block" />
         <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
           <div>
-            <h2 className="text-lg font-semibold text-dms">Welcome!</h2>
-            <h3 className="mt-2 text-3xl font-bold leading-8 tracking-tight text-dms sm:text-4xl">Meet Ben</h3>
+            <h2 className="text-xl font-puffinLiquid text-dms">Welcome!</h2>
+            <h3 className="mt-2 text-4xl font-puffinLiquid leading-8 tracking-tight text-dms sm:text-4xl">Meet Ben</h3>
           </div>
         </div>
         <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
@@ -44,8 +44,7 @@ export default function Home() {
                 <div className="aspect-h-7 aspect-w-12 lg:aspect-none">
                   <img
                     className="rounded-lg object-cover object-center shadow-lg"
-                    
-                    src="../src/images/ben.png"
+                    src="src/images/ben.png"
                     alt="Ben playing his Juno with Country Club at Still Smoking (circa 2019)"
                     width={1010}
                     height={1280}
@@ -53,16 +52,15 @@ export default function Home() {
                 </div>
                 <figcaption className="mt-3 flex text-sm text-gray-500">
                   <CameraIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                  <span className="ml-2">Photograph by Haley Bagne</span>
+                  <span className="ml-2 font-puffinRegular">Photograph by Haley Bagne</span>
                 </figcaption>
               </figure>
             </div>
           </div>
           <div className="mt-8 lg:mt-0">
             <div className="mx-auto max-w-prose text-base lg:max-w-none">
-              <p className="text-lg text-gray-500">
-                Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique
-                pellentesque. Blandit amet, sed aenean erat arcu morbi.
+              <p className="text-lg font-puffinRegular text-gray-500">
+                With a diverse set of skills and a passion for learning, I make a great addition to any team. I'm a front-end stack web developer with a background in music, audio engineering, and music administration. I'm a quick learner, a hard worker, and I'm always looking for new challenges.
               </p>
             </div>
             <div className="prose prose-indigo mx-auto mt-5 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none">
