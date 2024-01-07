@@ -5,30 +5,31 @@ import '../input.css';
 
 const Navbar = () => {
   return (
-    <nav className="bg-dmbg text-sky-400 ">
+    <nav className="bg-sky-950 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="font-puffinLiquid text-4xl">
-              Ben Newman
+            <Link to="/" className="font-puffinLiquid text-3xl text-sky-200">
+              Ben Newman 
+              <div className="text-2xl font-puffinLevel text-sky-200">Front End Developer</div>
             </Link>
           </div>
-          <div className="flex font-puffinLiquid">
+          <div className="flex text-xl p-2.5 font-puffinYoko">
           <Link
               to="/"
-              className="text-sky-400 hover:text-sky-200 hover:bg-sky-800 hover:shadow-sky-950 shadow-inner hover:text-white px-3 py-2 rounded-full  "
+              className="text-sky-400 hover:text-sky-200 hover:bg-sky-800 hover:shadow-sky-950 shadow-inner hover:text-white p-2.5 rounded-full  "
             >
               Home
             </Link>
             <Link
               to="/gamepage"
-              className="text-sky-400 hover:text-sky-200 hover:bg-sky-800 hover:shadow-sky-950 shadow-inner hover:text-white px-3 py-2 rounded-full  "
+              className="text-sky-400 hover:text-sky-200 hover:bg-sky-800 hover:shadow-sky-950 shadow-inner hover:text-white p-2.5 rounded-full  "
             >
               Box O' Matches !!
             </Link>
             <Link
               to="/contact"
-              className="text-sky-400 hover:text-sky-200 hover:bg-sky-800 hover:shadow-sky-950 shadow-inner hover:text-white px-3 py-2 rounded-full  "
+              className="text-sky-400 hover:text-sky-200 hover:bg-sky-800 hover:shadow-sky-950 shadow-inner hover:text-white p-2.5 rounded-full  "
             >
               Contact
             </Link>
