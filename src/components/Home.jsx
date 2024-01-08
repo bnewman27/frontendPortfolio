@@ -10,8 +10,8 @@ export default function Home() {
       <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="absolute bottom-0 left-3/4 top-0 hidden w-screen bg-gradient-tr from-sky-950 via-sky-800 to-sky-900 lg:block" />
         <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
-          <div>
-            <h3 className="text-4xl font-puffinLiquid text-sky-200">Welcome!</h3>
+          <div className="bg-gradient-radial bg-clip-text from-sky-200 to-sky-300">
+            <div className="bg-clip-text  text-4xl font-puffinLiquid text-transparent">Welcome!</div>
             
           </div>
         </div>
@@ -59,16 +59,15 @@ export default function Home() {
           </div>
           <div className="mt-8 lg:mt-0">
             <div className="mx-auto max-w-prose text-base lg:max-w-none">
-              <p className="text-xl font-puffinRegular text-dms0">
-                With a diverse set of skills and a passion for learning, I make a great addition to any team. I'm a front-end stack web developer with a background in music, audio engineering, and music administration. I'm a quick learner, a hard worker, and I'm always looking for new challenges.
+              <p className="text-xl font-puffinRegular text-dms">
+                With a diverse set of skills and a passion for learning, I make a great addition to any team. I'm a front-end developer with a background in music, audio engineering, and music administration. I'm a quick learner, a hard worker, and I'm always looking for new challenges.
               </p>
             </div>
-            <div className="prose prose-indigo mx-auto mt-5 text-dms lg:col-start-1 lg:row-start-1 lg:max-w-none">
-              <p>
-                Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget
-                pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna.
+            <div className="prose prose-indigo mx-auto mt-5 text-dms font-puffinRegular lg:col-start-1 lg:row-start-1 lg:max-w-none">
+              <p className="text-2xl">
+                Education
               </p>
-              <p>
+              <p className="text-xl">
                 Bibendum eu nulla feugiat justo, elit adipiscing. Ut tristique sit nisi lorem pulvinar. Urna, laoreet
                 fusce nibh leo. Dictum et et et sit. Faucibus sed non gravida lectus dignissim imperdiet a.
               </p>
