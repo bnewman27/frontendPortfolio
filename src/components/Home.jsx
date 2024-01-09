@@ -1,7 +1,7 @@
 import React from 'react';
 import '../input.css'; 
 
-import ben from '../images/ben.png'
+import '../images/ben.png'
 import { CameraIcon } from '@heroicons/react/20/solid'
 
 export default function Home() {
@@ -41,10 +41,10 @@ export default function Home() {
             </svg>
             <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
               <figure>
-                <div className="aspect-h-7 aspect-w-12 lg:aspect-none">
+                <div className="aspect-h-7 aspect-w-12  lg:aspect-none">
                   <img
                     className="rounded-lg object-cover object-center shadow-lg"
-                    src="src/images/ben.png"
+                    src="/images/ben.png"
                     alt="Ben playing his Juno with Country Club at Still Smoking (circa 2019)"
                     width={1010}
                     height={1280}
@@ -59,26 +59,43 @@ export default function Home() {
           </div>
           <div className="mt-8 lg:mt-0">
             <div className="mx-auto max-w-prose text-base lg:max-w-none">
-              <p className="text-xl font-puffinRegular text-dms">
-                With a diverse set of skills and a passion for learning, I make a great addition to any team. I'm a front-end developer with a background in music, audio engineering, and music administration. I'm a quick learner, a hard worker, and I'm always looking for new challenges.
+              <p className="text-2xl font-puffinRegular text-dms">
+                With a diverse set of skills and a passion for learning, I make a great addition to any team. I'm a front-end developer with a background in music, sound design, audio engineering, and music administration. I'm a quick learner, a hard worker, and I'm always looking for new challenges.
               </p>
             </div>
             <div className="prose prose-indigo mx-auto mt-5 text-dms font-puffinRegular lg:col-start-1 lg:row-start-1 lg:max-w-none">
-              <p className="text-2xl">
+              <p className="text-3xl">
                 Education
               </p>
-              <p className="text-xl">
-                Bibendum eu nulla feugiat justo, elit adipiscing. Ut tristique sit nisi lorem pulvinar. Urna, laoreet
-                fusce nibh leo. Dictum et et et sit. Faucibus sed non gravida lectus dignissim imperdiet a.
+              <p className="text-2xl">
+                Master's Certificate in Software Development, California State University, Long Beach 
+                </p>
+              <p className="text-lg">
+                400-hour full-stack web development bootcamp detailing the MERN stack (MongoDB, Express, React, Node.js) and the PERN stack (PostgreSQL, Express, React, Node.js).
+                As well as HTML, CSS, JavaScript, jQuery, TypeScript, Python, TailwindCSS, Bootstrap, APIs, JSON, MySQL, Sequelize, Git, GitHub, and more.
               </p>
+              <p className="text-3xl">
+                Other Things I'm Up To These Days
+                </p>
+                <div className="text-lg text-center">
               <p>
-                Dictum magnis risus phasellus vitae quam morbi. Quis lorem lorem arcu, metus, egestas netus cursus. In.
+                In addition to pursuing a career in software development, I manage the Independet Psych Rock / Cumbia / Dance Band Valley Wolf. I provide support in many aspects of the band's operations from:
               </p>
-              <ul role="list">
-                <li>Quis elit egestas venenatis mattis dignissim.</li>
-                <li>Cras cras lobortis vitae vivamus ultricies facilisis tempus.</li>
-                <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
+              <div className="grid grid-cols-3 space-x-2 ">
+              <ul className="text-center"role="list">
+                <li>Booking</li>
+                <li>Marketing</li>
+                <li>Merchandise</li>
               </ul>
+              <p className="text-center align-center text-xl">
+                to
+              </p>
+              <ul className="text-center" role="list">
+                <li>Web Development</li>
+                <li>Tour Management</li>
+                <li>Touring Sound Engineer</li>
+              </ul>
+              </div>
               <p>
                 Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet
                 velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus
@@ -94,6 +111,7 @@ export default function Home() {
                 Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique
                 pellentesque. Blandit amet, sed aenean erat arcu morbi.
               </p>
+              </div>
             </div>
           </div>
         </div>

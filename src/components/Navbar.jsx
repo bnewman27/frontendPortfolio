@@ -5,31 +5,31 @@ import '../input.css';
 
 const Navbar = () => {
   return (
-    <nav className="bg-sky-950 ">
+    <nav className="bg-sky-950 p-4 shadow-lg shadow-dmbg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between lg:h-16 md:h-16 sm:h-8 xs:h-8">
           <div className="flex items-center">
-            <Link to="/" className="font-puffinLiquid text-3x xs:text-sm text-sky-400">
+            <Link to="/" className="font-puffinLiquid lg:text-4xl md:text-4xl sm:text-2xl xs:text-sm p-3 text-sky-400">
               Ben Newman 
-              <div className="text-2xl xs:text-sm font-puffinRegular text-sky-400">Front End Developer</div>
+              <div className="lg:text-2xl md:text-2xl sm:text-lg xs:text-sm font-puffinRegular text-sky-400">Front End Developer</div>
             </Link>
           </div>
-          <div className="flex text-xl p-2.5 font-puffinYoko">
+          <div className="flex align-middle text-2xl p-4 lg:space-x-6 md:space-x-4 sm:space-x-2 xs:space-x-0 rounded hover:bg-sky-900 hover:shadow-inner shadow-dmbg font-puffinYoko">
           <Link
               to="/"
-              className="text-sky-400 hover:text-sky-200 hover:bg-sky-800 hover:shadow-sky-950 text-center shadow-inner hover:text-white p-2.5 rounded-full xs:text-sm xs:rounded xs: sm:rounded-xl"
+              className="text-sky-400 hover:text-sky-200 hover:bg-sky-950 hover:shadow-dmbg text-center shadow-inner hover:text-white p-2.5 rounded-full lg:text-xl md:text-xl sm:text-xl sm:rounded xs:text-md xs:rounded"
             >
               Home
             </Link>
             <Link
               to="/gamepage"
-              className="text-sky-400 hover:text-sky-200 hover:bg-sky-800 hover:shadow-sky-950 text-center shadow-inner hover:text-white p-2.5 rounded-full xs:text-xs xs:rounded sm:rounded-xl"
+              className="text-sky-400 hover:text-sky-200 hover:bg-sky-950 hover:shadow-dmbg text-center shadow-inner hover:text-white p-2.5 rounded-full lg:text-xl md:text-xl sm:text-xl sm:rounded-xl xs:text-sm xs:rounded"
             >
-              Box O' Matches !!
+              Box O' Matches
             </Link>
             <Link
               to="/contact"
-              className="text-sky-400 hover:text-sky-200 hover:bg-sky-800 hover:shadow-sky-950 text-center shadow-inner hover:text-white p-2.5 rounded-full xs:text-sm xs:rounded sm:rounded-xl"
+              className="text-sky-400 hover:text-sky-200 hover:bg-sky-950 hover:shadow-dmbg text-center shadow-inner hover:text-white p-2.5 rounded-full lg:text-xl md:text-xl sm:text-xl sm:rounded-xl xs:text-sm xs:rounded"
             >
               Contact
             </Link>

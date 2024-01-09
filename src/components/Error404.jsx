@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Error404 = () => {
     return (
-        <div className="w-full h-80 p-8 text-center text-sky-400 font-puffinRegular">
+        <div className="w-full h-full space-y-80 p-8 text-center bg-sky-900 text-sky-400 font-puffinRegular">
             <div className="text-8xl">404 Page Not Found</div>
             <div className="text-4xl">haha oopsies lolz, where do you think you're going? HMM?</div>
             <div className="p-8">

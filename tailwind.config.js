@@ -22,7 +22,7 @@ module.exports = {
       'gradient-b': 'linear-gradient(to bottom, var(--tw-gradient-stops))',
       'gradient-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
   
-        'ben': "url('/images/ben.jpeg')",
+        'ben': "url('/images/ben.png')",
    
       
 
