@@ -1,7 +1,5 @@
 import React from 'react';
 import '../input.css'; 
-
-import '../images/ben.png'
 import { CameraIcon } from '@heroicons/react/20/solid'
 
 export default function Home() {
@@ -11,7 +9,7 @@ export default function Home() {
         <div className="absolute bottom-0 left-3/4 top-0 hidden w-screen bg-gradient-tr from-sky-950 via-sky-800 to-sky-900 lg:block" />
         <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
           <div className="bg-gradient-radial bg-clip-text from-sky-200 to-sky-300">
-            <div className="bg-clip-text  text-4xl font-puffinLiquid text-transparent">Welcome!</div>
+            <div className="bg-clip-text text-4xl font-puffinLiquid text-transparent">Welcome!</div>
             
           </div>
         </div>
@@ -41,11 +39,11 @@ export default function Home() {
             </svg>
             <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
               <figure>
-                <div className="aspect-h-7 aspect-w-12  lg:aspect-none">
+                <div className="aspect-h-7 aspect-w-12 bg-sky-200 lg:aspect-none">
                   <img
-                    className="rounded-lg object-cover object-center shadow-lg"
-                    src="/images/ben.png"
-                    alt="Ben playing his Juno with Country Club at Still Smoking (circa 2019)"
+                    className="object-cover object-center shadow-lg rounded-lg"
+                    src="https://imgur.com/a/fm58pQK"
+                    alt="Me (Ben) playing with Country Club at Still Smoking (circa 2019)"
                     width={1010}
                     height={1280}
                   />
@@ -64,44 +62,41 @@ export default function Home() {
               </p>
             </div>
             <div className="prose prose-indigo mx-auto mt-5 text-dms font-puffinRegular lg:col-start-1 lg:row-start-1 lg:max-w-none">
-              <p className="text-3xl">
+              <p className="text-4xl pb-3">
                 Education
               </p>
-              <p className="text-2xl">
+              <p className="text-2xl pb-1">
                 Master's Certificate in Software Development, California State University, Long Beach 
                 </p>
               <p className="text-lg">
                 400-hour full-stack web development bootcamp detailing the MERN stack (MongoDB, Express, React, Node.js) and the PERN stack (PostgreSQL, Express, React, Node.js).
                 As well as HTML, CSS, JavaScript, jQuery, TypeScript, Python, TailwindCSS, Bootstrap, APIs, JSON, MySQL, Sequelize, Git, GitHub, and more.
               </p>
-              <p className="text-3xl">
-                Other Things I'm Up To These Days
+              <p className="text-4xl p-2">Other Things I'm Up To These Days
                 </p>
-                <div className="text-lg text-center">
+                <div className="text-lg ">
               <p>
-                In addition to pursuing a career in software development, I manage the Independet Psych Rock / Cumbia / Dance Band Valley Wolf. I provide support in many aspects of the band's operations from:
+                In addition to pursuing a career in software development, I manage the Independent Psych Rock / Cumbia / Dance Band Valley Wolf. I provide support in many aspects of the band's operations like:
               </p>
-              <div className="grid grid-cols-3 space-x-2 ">
-              <ul className="text-center"role="list">
+              <div className="grid grid-cols-2 space-x-1 ">
+              <ul className="text-center">
                 <li>Booking</li>
                 <li>Marketing</li>
                 <li>Merchandise</li>
               </ul>
-              <p className="text-center align-center text-xl">
-                to
-              </p>
-              <ul className="text-center" role="list">
+              <ul className="text-center">
                 <li>Web Development</li>
                 <li>Tour Management</li>
-                <li>Touring Sound Engineer</li>
+                <li>Tour Sound Engineer</li>
               </ul>
+              
               </div>
-              <p>
-                Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet
-                velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus
-                egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra.
+              <p className="text-center align-center text-lg">
+                
+                </p>
+              <p className="pt-2">
+                In the spring of 2023, I wrote the title track 'Spinning in Circles' for the film "Smoking in Circles"
               </p>
-              <h3>How we helped</h3>
               <p>
                 Tincidunt integer commodo, cursus etiam aliquam neque, et. Consectetur pretium in volutpat, diam.
                 Montes, magna cursus nulla feugiat dignissim id lobortis amet. Laoreet sem est phasellus eu proin massa,
