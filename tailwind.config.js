@@ -21,6 +21,8 @@ module.exports = {
       'gradient-r': 'linear-gradient(to right, var(--tw-gradient-stops))',
       'gradient-b': 'linear-gradient(to bottom, var(--tw-gradient-stops))',
       'gradient-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
+      'profile': "url('/src/assets/images/ben.png')",
+      'profile2': "url('https://imgur.com/a/fm58pQK')",
       
 
     },

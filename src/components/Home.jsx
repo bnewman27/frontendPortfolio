@@ -2,15 +2,15 @@ import React from 'react';
 import '../input.css'; 
 import { CameraIcon } from '@heroicons/react/20/solid'
 
+
 export default function Home() {
   return (
     <div className="overflow-hidden bg-gradient-tr from-sky-900 via-sky-800 to-sky-950">
       <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="absolute bottom-0 left-3/4 top-0 hidden w-screen bg-gradient-tr from-sky-950 via-sky-800 to-sky-900 lg:block" />
         <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
-          <div className="bg-gradient-radial bg-clip-text from-sky-200 to-sky-300">
+          <div className="bg-gradient-radial bg-clip-text from-sky-600 via-sky-400 to-sky-300">
             <div className="bg-clip-text text-4xl font-puffinLiquid text-transparent">Welcome!</div>
-            
           </div>
         </div>
         <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
@@ -41,7 +41,7 @@ export default function Home() {
               <figure>
                 <div className="aspect-h-7 aspect-w-12 bg-sky-200 lg:aspect-none">
                   <img
-                    className="object-cover object-center shadow-lg rounded-lg"
+                    className="object-cover object-center bg-profile2 shadow-lg rounded-lg"
                     src="https://imgur.com/a/fm58pQK"
                     alt="Me (Ben) playing with Country Club at Still Smoking (circa 2019)"
                     width={1010}
@@ -95,22 +95,17 @@ export default function Home() {
                 
                 </p>
               <p className="pt-2">
-                In the spring of 2023, I wrote the title track 'Spinning in Circles' for the film "Smoking in Circles"
+                In the spring of 2023, I wrote the title track 'Spinning in Circles' for the film "Smoking in Circles".
+                The film has 2 awards to date.
               </p>
-              <p>
-                Tincidunt integer commodo, cursus etiam aliquam neque, et. Consectetur pretium in volutpat, diam.
-                Montes, magna cursus nulla feugiat dignissim id lobortis amet. Laoreet sem est phasellus eu proin massa,
-                lectus. Diam rutrum posuere donec ultricies non morbi. Mi a platea auctor mi.
-              </p>
-              <p>
-                Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique
-                pellentesque. Blandit amet, sed aenean erat arcu morbi.
-              </p>
+              <p className="pt-2">
+                In my spare time, I compose arrangments for various projects when the time allows.
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }
