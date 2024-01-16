@@ -14,7 +14,7 @@ const Navbar = () => {
               <div className="lg:text-2xl md:text-2xl sm:text-lg xs:text-sm font-puffinRegular text-sky-400">Front End Developer</div>
             </Link>
           </div>
-          <div className="flex align-middle text-2xl p-4 lg:space-x-6 md:space-x-4 sm:space-x-2 xs:space-x-0 rounded hover:bg-sky-900 hover:shadow-lg shadow-dmbg ">
+          <div className="flex align-middle text-2xl p-4 lg:space-x-6 md:space-x-4 sm:space-x-2 xs:space-x-0 rounded hover:bg-sky-800 hover:shadow-lg shadow-dmbg ">
           <Link
               to="/"
               className="font-puffinRegular hover:font-puffinYoko text-sky-400 hover:text-sky-200 hover:bg-sky-950 hover:shadow-dmbg text-center shadow-inner hover:text-white p-2.5 rounded-md lg:text-xl md:text-xl sm:text-xl xs:text-md x"
