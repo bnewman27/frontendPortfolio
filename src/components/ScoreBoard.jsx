@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import '../input.css';
+import resetScore from './Game';
 
 const HIGH_SCORES = 'highScores';
-const NO_OF_HIGH_SCORES = 10;
+const NO_OF_HIGH_SCORES = 5;
 
 function ScoreBoard({ score }) {
     const [highScores, setHighScores] = useState([]);
@@ -47,12 +48,18 @@ function ScoreBoard({ score }) {
         storedHighScores.sort((a, b) => b.score - a.score);
         storedHighScores.splice(NO_OF_HIGH_SCORES);
         localStorage.setItem(HIGH_SCORES, JSON.stringify(storedHighScores));
-        console.log(storedHighScores);
+    }
+
+    function setScore(newScore) {
+        resetScore(newScore);
     }
 
     function endLevel() {
         checkHighScore(score);
         setTimer(60);
+        setScore();
+        getHighScores();
+        showHighScores();
     }
 
     if (timer === 0) {

@@ -87,6 +87,8 @@ const Game = () => {
     }
   }
 
+ 
+
   // Respawn
   
   const moveIntoSquareBelow = () => {
@@ -188,8 +190,8 @@ const Game = () => {
 
   return (
     
-    <div className="grid grid-rows-1 bg-gradient-tr  justify-center space-y-8">
-    <div className="font-puffinChrome  ring ring-sky-400 ring-offset-2 ring-offset-dmbg drop-shadow-lg shadow-inner shadow-sky-950 text-sky-400 xl:text-7xl lg:text-7xl md:text-6xl sm:text-2xl p-8 text-center ">
+    <div className="grid grid-rows-1 -x-space-4 bg-gradient-tr from-sky-950 via-sky-800 to-sky-900 justify-center space-y-8 p-4">
+    <div className="font-puffinChrome  ring ring-sky-400 ring-offset-2 ring-offset-dmbg drop-shadow-lg shadow-inner bg-sky-950 shadow-sky-950 text-sky-400 xl:text-6xl lg:text-6xl md:text-4xl sm:text-2xl p-8 text-center space-y-8 ">
         Box O' Matches!!
     </div>
     <div className="game bg-gradient-radial items-center from-sky-400 via-sky-800 to-sky-950 rounded-xl ring ring-sky-950 ">
@@ -210,11 +212,9 @@ const Game = () => {
           />
         ))} 
      </div>
-     <div className="scoreboard rounded-xl -space-y-8 ">
-    <ScoreBoard score={scoreDisplay} />
-    
-      
-   </div>
+     <div className="scoreboard  rounded-xl -space-y-8 ">
+      <ScoreBoard score={scoreDisplay} />
+     </div>
    </div>
    
   );
