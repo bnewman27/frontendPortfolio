@@ -23,8 +23,12 @@ module.exports = {
       'gradient-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
       'profile': "url('/src/images/ben.png')",
       'profile2': "url('https://imgur.com/a/fm58pQK')",
-      
+    },
 
+    keyframes: {
+      rotate: {
+        '0%, 100%': { transform: 'rotate(-180deg)' },
+      }
     },
    
       colors: {

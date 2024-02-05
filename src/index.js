@@ -8,6 +8,11 @@ import GamePage from './components/GamePage';
 import Contact from './components/Contact';
 import Error404 from './components/Error404';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faBars, faHome, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faBars, faHome, faEnvelope, faPhone);
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

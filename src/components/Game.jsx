@@ -190,11 +190,11 @@ const Game = () => {
 
   return (
     
-    <div className="grid grid-rows-1 -x-space-4 bg-gradient-tr from-sky-950 via-sky-800 to-sky-900 justify-center space-y-8 p-4">
-    <div className="font-puffinChrome  ring ring-sky-400 ring-offset-2 ring-offset-dmbg drop-shadow-lg shadow-inner bg-sky-950 shadow-sky-950 text-sky-400 xl:text-6xl lg:text-6xl md:text-4xl sm:text-2xl p-8 text-center space-y-8 ">
+    <div className="grid grid-rows-1 bg-gradient-tr from-sky-950 via-sky-800 to-sky-900 justify-center space-y-8 xl:p-4 lg:p-3 md:p-2 sm:p-0 xs:p-0">
+    <div className="font-puffinChrome ring ring-sky-400 ring-offset-2 ring-offset-dmbg drop-shadow-lg shadow-inner bg-sky-950 shadow-sky-950 text-sky-400 xl:text-6xl lg:text-5xl md:text-4xl sm:text-2xl xs:text-xl xl:p-8 lg:p-6 md:p-4 sm:p-2 xs:p-0 text-center space-y-8 ">
         Box O' Matches!!
     </div>
-    <div className="game bg-gradient-radial items-center from-sky-400 via-sky-800 to-sky-950 rounded-xl ring ring-sky-950 ">
+    <div className="game bg-gradient-radial items-center from-sky-950 via-sky-800 to-sky-950 rounded-xl ring ring-sky-950  ">
         {currentColorArrangement.map((candyColor, index) => (
           <img
             key={index}
@@ -208,7 +208,7 @@ const Game = () => {
             onDragLeave={(e) => e.preventDefault()}
             onDrop={dragDrop}
             onDragEnd={dragEnd}
-            className="p-2 rounded-xl bg-gradient-radial decoration-white from-sky-800 via-sky-400 to-sky-200 hover:animate-pulse active:animate-bounce ring ring-sky-800 shadow-2xl shadow-sky-950"
+            className="p-1 rounded-xl bg-gradient-radial from-sky-800 via-sky-400 to-sky-200 hover:animate-pulse active:animate-bounce ring ring-sky-800 shadow-2xl shadow-sky-800"
           />
         ))} 
      </div>

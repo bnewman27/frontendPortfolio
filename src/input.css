@@ -5,23 +5,85 @@
 @import url("https://use.typekit.net/gge0xvh.css");
 @import url("https://use.typekit.net/pat4pcn.css");
 
-.app {
+
+
+@media (min-width:376px)  { /* xs. */
+  .app {
+    display: flex;
+    padding: 5px;
+  }
+  .game {
+    width: 94px;
+    height: 94px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .game img {
+    width: 12px;
+    height: 12px; 
+  }
+  }
+@media (min-width:480px)  { /* sm */
+  .app {
   display: flex;
-  padding: 30px;
- 
+  padding: 10px;
 }
 .game {
-  width: 560px;
-  height: 560px;
+  width: 380px;
+  height: 380px;
   display: flex;
   flex-wrap: wrap;
-  
 }
 .game img {
-  width: 70px;
-  height: 70px; 
+  width: 47.499999999999993px;
+  height: 47.499999999999993px;
+} }
+@media (min-width:768px)  { /* md */ 
+  .app {
+    display: flex;
+    padding: 25px;
+  }
+  .game {
+    width: 468px;
+    height: 468px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .game img {
+    width: 58px;
+    height: 58px; 
+  }}
+@media (min-width:976px) { /* lg */ 
+  .app {
+    display: flex;
+    padding: 30px;
+  }
+  .game {
+    width: 560px;
+    height: 560px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .game img {
+    width: 70px;
+    height: 70px; 
+  }}
+@media (min-width:1440px) { /* xl */ 
+  .app {
+    display: flex;
+    padding: 30px;
+  }
+  .game {
+    width: 560px;
+    height: 560px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+   .game img {
+    width: 70px;
+    height: 70px; 
+  }}
  
-}
 
 
 
